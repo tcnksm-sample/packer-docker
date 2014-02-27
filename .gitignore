@@ -1,0 +1,9 @@
+# Created by http://www.gitignore.io
+
+### Vagrant ###
+.vagrant/
+*.box
+
+### Pacjer ###
+packer_cache
+
