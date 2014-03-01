@@ -1,4 +1,4 @@
-# Build docker image by [Packer](http://www.packer.io/) with on OSX
+# Build Docker image by [Packer](http://www.packer.io/)
 
 [You can build Docker images without Dockerfile](http://www.packer.io/docs/builders/docker.html#toc_4).
 
@@ -41,7 +41,7 @@ $ packer build machine_pupet.json
 Check it.
 
 ```bash
-docker run -t -i tcnksm/packer-puppet:0.1 bash
+$ docker run -t -i tcnksm/packer-puppet:0.1 bash
 ```
 
 ### Ansible
@@ -55,6 +55,6 @@ $ packer build machine_pupet.json
 Check it.
 
 ```bash
-docker run -i -t tcnksm/packer-ansible:0.1 bash
+$ docker run -i -t tcnksm/packer-ansible:0.1 bash
 ```
 
