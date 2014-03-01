@@ -1,5 +1,7 @@
 # Build docker image by Packer on OSX
 
+This is not worked because of [this](https://github.com/mitchellh/packer/issues/901).
+
 ## How to build
 
 Run docker 

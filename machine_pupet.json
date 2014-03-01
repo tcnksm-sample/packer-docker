@@ -2,11 +2,11 @@
     "builders":[{
         "type": "docker",
         "image": "ubuntu",
-        "export_path": "./image.tar"
+        "export_path": "image.tar"
     }],
     "provisioners":[{
         "type": "puppet-masterless",
-        "manifest_file": "./manifests/default.pp"
+        "manifest_file": "manifests/default.pp"
     }],
     "post-processors": [
         {
