@@ -1,4 +1,6 @@
-# Build docker image by Packer on OSX
+# Build docker image by [Packer](http://www.packer.io/) with on OSX
+
+[You can build Docker images without Dockerfile](http://www.packer.io/docs/builders/docker.html#toc_4).
 
 ## How to build
 
