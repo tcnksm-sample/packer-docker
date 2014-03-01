@@ -32,10 +32,10 @@ $ docker run -t -i tcnksm/packer-chef:0.1 bash
 
 ### Puppet
 
-Build docker image with pupet provisioning
+Build docker image with puppet provisioning
 
 ```
-$ packer build machine_pupet.json
+$ packer build machine_puppet.json
 ```
 
 Check it.
@@ -49,7 +49,7 @@ $ docker run -t -i tcnksm/packer-puppet:0.1 bash
 Build docker image with ansible provisioning
 
 ```
-$ packer build machine_pupet.json
+$ packer build machine_ansible.json
 ```
 
 Check it.
