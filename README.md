@@ -1,7 +1,5 @@
 # Build docker image by Packer on OSX
 
-* Now packer provision with docker from osx docker client is [not worked]((https://github.com/mitchellh/packer/issues/901).
-
 ## How to build
 
 Run docker 
