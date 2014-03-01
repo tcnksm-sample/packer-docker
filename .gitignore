@@ -2,8 +2,6 @@
 
 ### Vagrant ###
 .vagrant/
-*.box
 
-### Pacjer ###
+### Packer ###
 packer_cache
-

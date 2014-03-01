@@ -1,0 +1,8 @@
+- hosts: 127.0.0.1
+  user: root
+  tasks:
+    - name: Install apache2
+      apt: pkg=$item force=yes update_cache=yes
+      with_items:
+        - git
+        - apache2

@@ -1,6 +1,6 @@
 # Build docker image by Packer on OSX
 
-This is not worked because of [this](https://github.com/mitchellh/packer/issues/901).
+* Now packer provision with docker from osx docker client is [not worked]((https://github.com/mitchellh/packer/issues/901).
 
 ## How to build
 
@@ -8,23 +8,53 @@ Run docker
 
 ```
 $ vagrant up
-$ export export DOCKER_HOST="192.168.50.4:5422"
 ```
 
-Login Docker.io to push image
+This will install docker and packer in vagrant box.
 
 ```
-$ docker login
+$ vagrant ssh
 ```
 
-Create sample cookbook (This time apache)
-
-```
-$ knife cookbook create apache -o site-cookbook
-```
+### Chef
 
 Build docker image with chef provisioning
 
 ```
-$ packer build machine.json
+$ packer build machine_chef.json
 ```
+
+Check it.
+
+```bash
+$ docker run -t -i tcnksm/packer-chef:0.1 bash
+```
+
+### Puppet
+
+Build docker image with pupet provisioning
+
+```
+$ packer build machine_pupet.json
+```
+
+Check it.
+
+```bash
+docker run -t -i tcnksm/packer-puppet:0.1 bash
+```
+
+### Ansible
+
+Build docker image with ansible provisioning
+
+```
+$ packer build machine_pupet.json
+```
+
+Check it.
+
+```bash
+docker run -i -t tcnksm/packer-ansible:0.1 bash
+```
+

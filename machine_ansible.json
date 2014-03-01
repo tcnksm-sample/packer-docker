@@ -7,17 +7,21 @@
     "provisioners":[
         {
             "type": "shell",
-            "inline": ["apt-get -y update; apt-get install -y puppet-common"]
+            "inline": [
+                "apt-get -y update",
+                "apt-get install -y python-pip python-dev",
+                "pip install ansible"
+            ]
         },
         {
-            "type": "puppet-masterless",
-            "manifest_file": "manifests/default.pp"
+            "type": "ansible-local",
+            "playbook_file": "playbooks/local.yml"
         }
     ],
     "post-processors": [
         {
             "type": "docker-import",
-            "repository": "tcnksm/packer-puppet",
+            "repository": "tcnksm/packer-ansible",
             "tag": "0.1"
         }
     ]
